@@ -8,7 +8,7 @@
     },
     "scripts": {
         "test": "mocha",
-        "build": "rimraf dist && mkdir -p dist && node src/write.js > dist/sushiswap-chainlink.whitelist.json",
+        "build": "rimraf dist && mkdir -p dist && node build.js > dist/sushiswap-chainlink.whitelist.json",
         "prepublishOnly": "npm test && npm run build"
     },
     "files": [

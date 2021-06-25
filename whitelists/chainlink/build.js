@@ -23,19 +23,16 @@ const FILE_NAMES = [
   "okex-testnet",
 ];
 
-console.log(
-  JSON.stringify(
-    FILE_NAMES.reduce((previousValue, currentValue) => {
-      const path = `./whitelists/chainlink/src/tokens/${currentValue}`;
-      try {
-        if (fs.existsSync(path)) {
-          return [...previousValue, ...require(path)];
-        }
-      } catch (error) {
-        return previousValue;
-      }
-    }, []),
-    null,
-    2
-  )
-);
+const tokens = FILE_NAMES.reduce((previousValue, currentValue) => {
+  const path = `./src/tokens/${currentValue}.js`;
+  try {
+    if (fs.existsSync(path)) {
+      return [...previousValue, ...require(path)];
+    }
+    return previousValue;
+  } catch (error) {
+    throw error;
+  }
+}, []);
+
+console.log(JSON.stringify(tokens, null, 2));
