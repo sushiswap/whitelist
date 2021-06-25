@@ -1,4 +1,4 @@
-modules.exports = [
+module.exports = [
   "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47", // ADA
   "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", // BUSD
   "0xAD6cAEb32CD2c308980a548bD0Bc5AA4306c6c18", // BAND

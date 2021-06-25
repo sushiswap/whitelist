@@ -1,4 +1,4 @@
-modules.exports = [
+module.exports = [
   "0x111111111117dC0aa78b770fA6A738034120C302", // 1INCH
   "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9", // AAVE
   "0xADE00C28244d5CE17D72E40330B1c318cD12B7c3", // ADX
@@ -91,8 +91,4 @@ modules.exports = [
   "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e", // YFI
   "0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83", // YFII
   "0xE41d2489571d322189246DaFA5ebDe1F4699F498", // ZRX
-  "", //
-  "", //
-  "", //
-  "", //
 ];
