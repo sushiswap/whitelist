@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 const FILE_NAMES = [
   "mainnet",
   "ropsten",
@@ -24,10 +26,14 @@ const FILE_NAMES = [
 console.log(
   JSON.stringify(
     FILE_NAMES.reduce((previousValue, currentValue) => {
-      return [
-        ...previousValue,
-        ...require(`./whitelists/chainlink/src/tokens/${currentValue}`),
-      ];
+      const path = `./whitelists/chainlink/src/tokens/${currentValue}`;
+      try {
+        if (fs.existsSync(path)) {
+          return [...previousValue, ...require(path)];
+        }
+      } catch (error) {
+        return previousValue;
+      }
     }, []),
     null,
     2
