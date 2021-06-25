@@ -2,8 +2,8 @@
   "name": "whitelist",
   "private": true,
   "scripts": {
-    "publish": "yarn workspaces foreach npm publish --tolerate-republish",
-    "build": "yarn workspaces foreach build"
+    "publish": "yarn workspaces foreach npm publish --tolerate-republish --access public",
+    "build": "yarn workspaces foreach run build"
   },
   "workspaces": [
     "whitelists/*"

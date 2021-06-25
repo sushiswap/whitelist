@@ -3,9 +3,6 @@
     "version": "0.1.0",
     "description": "SushiSwap Chainlink whitelist",
     "main": "build/sushiswap-chainlink.whitelist.json",
-    "bin": {
-        "initilise": "./bin/index.js"
-    },
     "scripts": {
         "test": "mocha",
         "build": "rimraf dist && mkdir -p dist && node build.js > dist/sushiswap-chainlink.whitelist.json",
