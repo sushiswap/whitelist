@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { ChainId } = require("@sushiswap/sdk");
 
-const FILE_NAMES = {
+const FILE_NAME = {
   [ChainId.MAINNET]: "mainnet",
   [ChainId.ROPSTEN]: "ropsten",
   [ChainId.RINKEBY]: "rinkeby",
@@ -24,8 +24,10 @@ const FILE_NAMES = {
   [ChainId.OKEX_TESTNET]: "okex-testnet",
 };
 
+const FILE_EXTENSION = "js";
+
 const tokens = Object.keys(ChainId).reduce((previousValue, currentValue) => {
-  const path = `./src/tokens/${FILE_NAMES[currentValue]}.js`;
+  const path = `./src/tokens/${FILE_NAME[currentValue]}.${FILE_EXTENSION}`;
   try {
     if (fs.existsSync(path)) {
       return { ...previousValue, [currentValue]: require(path) };
