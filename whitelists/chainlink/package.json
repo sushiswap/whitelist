@@ -1,6 +1,6 @@
 {
     "name": "@sushiswap/chainlink-whitelist",
-    "version": "0.2.2",
+    "version": "0.2.4",
     "description": "SushiSwap Chainlink whitelist",
     "main": "dist/sushiswap-chainlink.whitelist.json",
     "scripts": {

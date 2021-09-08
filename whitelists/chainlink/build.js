@@ -22,6 +22,7 @@ const FILE_NAME = {
   [ChainId.HARMONY_TESTNET]: "harmony-testnet",
   [ChainId.OKEX]: "okex",
   [ChainId.OKEX_TESTNET]: "okex-testnet",
+  [ChainId.ARBITRUM]: "arbitrum",
 };
 
 const FILE_EXTENSION = "js";
