@@ -1,12 +1,11 @@
 {
     "name": "@sushiswap/chainlink-whitelist",
-    "version": "0.2.4",
+    "version": "0.2.7",
     "description": "SushiSwap Chainlink whitelist",
     "main": "dist/sushiswap-chainlink.whitelist.json",
     "scripts": {
-        "test": "mocha",
         "build": "rimraf dist && mkdir -p dist && node build.js > dist/sushiswap-chainlink.whitelist.json",
-        "prepublishOnly": "npm test && npm run build"
+        "prepublishOnly": "npm run build"
     },
     "files": [
         "dist/sushiswap-chainlink.whitelist.json"
